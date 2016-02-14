@@ -126,7 +126,6 @@ section {
   max-width: 500px;
   margin: 0px auto;
   text-align: center;
-  border: 1px solid blue;
 }
 
 section img {
@@ -149,6 +148,7 @@ section h4 {
 .calculator {
   position: relative;
   margin-bottom: 60px;
+  transition-duration: 0.5s;
 }
 
 
@@ -216,6 +216,17 @@ footer {
     max-width: 896px;
   }
 
+  .marketing-page,
+  .search-page,
+  .travel-app,
+  .map-of-favorite-sports,
+  .photo-gallery,
+  .calculator {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    transition-duration: 0.5s;
+  }
 
 
 @media screen and (min-width: 1024px) {
@@ -250,4 +261,20 @@ footer {
   .content {
     width: 946px;
   }
+
+  /* ================ SECTION FOR PAGES (tablet) ================= */
+  section {
+    max-width: 974px;
+  }
+
+  .marketing-page,
+  .search-page,
+  .travel-app,
+  .map-of-favorite-sports,
+  .photo-gallery,
+  .calculator {
+    width: 32%;
+    transition-duration: 0.5s;
+  }
+
 }
