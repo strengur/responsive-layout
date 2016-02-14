@@ -1,20 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 16px;
 }
 
 body {
-  background-color: white;
+  background: #f7f7f7;
   font-family: 'Libre Baskerville', serif;
   font-weight: 400;
   color: #333;
 }
 
+/* ================ BASIC ADJUSTMENTS (FONTS, COLOR, LINE HEIGHT ETC.) ================= */
 p {
-  line-height: 1.55;
+  font-size: 0.85em;
+  line-height: 1.55em;
   margin-bottom: 1.5em;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .main-nav li {
   font-family: 'Lato', sans-serif;
   /*margin: 1.414em 0 0.5em;*/
   font-weight: inherit;
@@ -43,4 +49,205 @@ h4 {
   font-size: 1.618em;
   margin-top: 65px;
   margin-bottom: 24px;
+}
+
+.wrap {
+  min-height: calc(100vh - 100px);
+}
+
+.clearfix::after {
+  content: “”;
+  display: table;
+  clear: both:
+}
+
+/* ================ TOP BANNER & NAVIGATION ================= */
+.students-name h3 {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.main-nav {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.main-nav a {
+  display: block;
+  color: #f7f7f7;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.main-nav ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  background: #8f8f8f;
+  margin: 0 5% 5px 5%;
+  border-radius: 3px;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.main-nav li:hover {
+  background: #6f6f6f;
+}
+
+.main-nav li:last-child {
+  margin-bottom: 0;
+}
+
+/* ================ HEADER ================= */
+.content {
+  width: 310px;
+  margin: 0 auto;
+  text-align: center;
+}
+.students-profile-image {
+  max-width: 500px;
+  margin: 38px auto;
+  background: #d8d8d8;
+  border-radius: 3px;
+}
+
+.students-profile-image img {
+  margin: 14px 4px 10px 4px;
+  border-radius: 50%;
+}
+
+/* ================ SECTION FOR PAGES ================= */
+section {
+  max-width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  border: 1px solid blue;
+}
+
+section img {
+  max-width: 100%;
+}
+
+section h3 {
+  margin-top: 43px;
+}
+
+section h4 {
+  margin-top: 35px;
+}
+
+.marketing-page,
+.search-page,
+.travel-app,
+.map-of-favorite-sports,
+.photo-gallery,
+.calculator {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+
+
+/* ================ FOOTER ================= */
+footer {
+  height: 100px;
+  background: #6f6f6f;
+}
+
+@media screen and (min-width: 768px) {
+  /* ================ TOP BANNER & NAVIGATION (tablet) ================= */
+  p {
+    font-size: 1em;
+  }
+
+  header {
+    height: 228px;
+  }
+
+  .main-nav {
+    max-width: 21.9em;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .main-nav li:last-child {
+    margin-right: 0;
+  }
+
+  /* ================ HEADER (tablet) ================= */
+  .content {
+    position: relative;
+    width: 750px;
+    margin-top: 60px;
+  }
+
+  .students-bio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    text-align: left;
+  }
+
+  .students-bio p {
+    margin-top: 0;
+  }
+
+  .students-profile-image {
+    position: absolute;;
+    top: 0;
+    right: 0;
+    width: 35%;
+    margin-top: 0;
+  }
+
+  /* ================ SECTION FOR PAGES (tablet) ================= */
+  section {
+    max-width: 896px;
+  }
+
+
+
+@media screen and (min-width: 1024px) {
+  /* ================ TOP BANNER & NAVIGATION (display) ================= */
+
+  nav {
+    position: relative;
+    max-width: 1024px;
+    height: 64px;
+    margin: 0 auto;
+  }
+
+  .students-name {
+    position: absolute;
+    left: 40px;
+  }
+
+  .students-name h3 {
+    margin: 5px 0;
+  }
+
+  .main-nav {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+  }
+
+  .main-nav a {
+    padding: 5px 12px;
+  }
+  /* ================ HEADER (display) ================= */
+  .content {
+    width: 946px;
+  }
 }
