@@ -99,7 +99,7 @@ a {
 }
 
 .main-nav li {
-  background: #8f8f8f;
+  background: #73715B;
   margin: 0 5% 5px 5%;
   border-radius: 3px;
   text-align: center;
@@ -107,7 +107,7 @@ a {
 }
 
 .main-nav li:hover {
-  background: #6f6f6f;
+  background: #343229;
 }
 
 .main-nav li:last-child {
@@ -127,7 +127,7 @@ header {
 .students-profile-image {
   max-width: 500px;
   margin: 38px auto;
-  background: #d8d8d8;
+  background: #D9D4AB;
   border-radius: 3px;
 }
 
@@ -173,16 +173,17 @@ section h4 {
 
 /* ================ CONTACT PAGE ================= */
 .contact-page-txt {
+  position: relative;;
   background: #F3EDBF;
   max-width: 500px;
-  margin: 55px auto;
+  margin: 100px auto;
   border-radius: 3px;
   text-align: center;
   padding: 1px 15px 40px;
 }
 
 .contact-page-txt h3 {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 10px;
 }
 
@@ -193,9 +194,20 @@ section h4 {
   font-style: italic;
 }
 
+.contact-page-icon {
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    margin-left: -35px;
+}
+
+.contact-page-icon img {
+    width: 70px;
+}
+
 /* ================ FOOTER ================= */
 footer {
-  background: #dfdfdf;
+  background: #D9D4AB;
 }
 
 .contact {
