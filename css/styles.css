@@ -20,7 +20,7 @@ p {
   margin-bottom: 1.5em;
 }
 
-h1, h2, h3, h4, .main-nav li {
+h1, h2, h3, h4, a, .main-nav li, footer p, .contact-page-txt {
   font-family: 'Lato', sans-serif;
   /*margin: 1.414em 0 0.5em;*/
   font-weight: inherit;
@@ -51,17 +51,25 @@ h4 {
   margin-bottom: 24px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrap {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 379px);
 }
 
-.clearfix::after {
-  content: “”;
-  display: table;
-  clear: both:
+.wrap-contact-page {
+  min-height: calc(100vh - 150px);
 }
 
-/* ================ TOP BANNER & NAVIGATION ================= */
+.portfolio h3,
+.contact h4,
+.footer-nav-mobile a {
+  text-transform: uppercase;
+}
+
+/* ================ TOP BANNER & NAVIGATION's ================= */
 .students-name h3 {
   margin: 30px 0;
   text-align: center;
@@ -76,7 +84,6 @@ h4 {
 .main-nav a {
   display: block;
   color: #f7f7f7;
-  text-decoration: none;
   padding: 12px;
 }
 
@@ -85,12 +92,16 @@ h4 {
   margin: 0;
 }
 
+.main-nav li,
+.footer-nav-display li {
+  list-style: none;
+  text-transform: uppercase;
+}
+
 .main-nav li {
   background: #8f8f8f;
   margin: 0 5% 5px 5%;
   border-radius: 3px;
-  list-style: none;
-  text-transform: uppercase;
   text-align: center;
   letter-spacing: 1.5px;
 }
@@ -104,6 +115,10 @@ h4 {
 }
 
 /* ================ HEADER ================= */
+header {
+  padding-bottom: 20px;
+}
+
 .content {
   width: 310px;
   margin: 0 auto;
@@ -126,6 +141,7 @@ section {
   max-width: 500px;
   margin: 0px auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 section img {
@@ -147,20 +163,93 @@ section h4 {
 .photo-gallery,
 .calculator {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   transition-duration: 0.5s;
 }
 
+.portfolio-page {
+  margin-top: 100px;
+}
 
+/* ================ CONTACT PAGE ================= */
+.contact-page-txt {
+  background: #F3EDBF;
+  max-width: 500px;
+  margin: 55px auto;
+  border-radius: 3px;
+  text-align: center;
+  padding: 1px 15px 40px;
+}
+
+.contact-page-txt h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.contact-page-txt h4 {
+  color: #6f6f6f;
+  margin-top: 5px;
+  margin-bottom: 60px;
+  font-style: italic;
+}
 
 /* ================ FOOTER ================= */
 footer {
-  height: 100px;
-  background: #6f6f6f;
+  background: #dfdfdf;
+}
+
+.contact {
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1px 0 50px;
+}
+
+.footer-nav {
+  height: 60px;
+  background: #f7f7f7;
+}
+
+.footer-nav-display {
+  display: none;
+}
+
+.footer-nav p,
+.footer-nav a {
+  font-size: 1em;
+}
+
+.footer-nav-mobile,
+.footer-nav-display {
+  position: relative;
+  width: 95%
+}
+
+.footer-nav-mobile p,
+.footer-nav-mobile a,
+.footer-nav-display p,
+.footer-nav-display ul {
+  display: inline-block;
+  position: absolute;
+  top: 24px;
+}
+
+.footer-nav-mobile p,
+.footer-nav-display p,
+.footer-nav-display ul {
+  margin-top: 0;
+}
+
+.footer-nav-mobile p {
+  left: 2%;
+}
+
+.footer-nav-mobile a {
+  right: 2%;
 }
 
 @media screen and (min-width: 768px) {
-  /* ================ TOP BANNER & NAVIGATION (tablet) ================= */
+  /* ================ TOP BANNER & NAVIGATION's (tablet) ================= */
   p {
     font-size: 1em;
   }
@@ -173,14 +262,19 @@ footer {
     max-width: 21.9em;
   }
 
-  .main-nav li {
+  .main-nav li,
+  .footer-nav-display li {
     display: inline-block;
     margin-right: 10px;
+  }
+
+  .main-nav li {
     margin-left: 0;
     margin-bottom: 0;
   }
 
-  .main-nav li:last-child {
+  .main-nav li:last-child,
+  .footer-nav-display li:last-child {
     margin-right: 0;
   }
 
@@ -212,7 +306,8 @@ footer {
   }
 
   /* ================ SECTION FOR PAGES (tablet) ================= */
-  section {
+  section,
+  .footer-nav-display {
     max-width: 896px;
   }
 
@@ -228,10 +323,39 @@ footer {
     transition-duration: 0.5s;
   }
 
+  /* ================ CONTACT PAGE ================= */
+  .contact-page-txt {
+    max-width: 750px;
+  }
+
+
+  /* ================ FOOTER (tablet) ================= */
+  .footer-nav-mobile {
+    display: none;
+  }
+
+  .contact {
+    max-width: 430px;
+  }
+
+  .footer-nav-display {
+    margin: auto;
+    display: block;
+  }
+
+
+
+  .footer-nav-display p {
+    left: 0;
+  }
+
+  .footer-nav-display ul {
+    right: 0;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   /* ================ TOP BANNER & NAVIGATION (display) ================= */
-
   nav {
     position: relative;
     max-width: 1024px;
@@ -257,6 +381,7 @@ footer {
   .main-nav a {
     padding: 5px 12px;
   }
+
   /* ================ HEADER (display) ================= */
   .content {
     width: 946px;
@@ -276,5 +401,4 @@ footer {
     width: 32%;
     transition-duration: 0.5s;
   }
-
 }
